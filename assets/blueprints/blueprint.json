@@ -1,0 +1,57 @@
+{
+  "landingPage": "/?page_id=1182",
+  "preferredVersions": {
+    "php": "7.4",
+    "wp": "latest"
+  },
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "features": {
+    "networking": true
+  },  
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org\/plugins",
+        "slug": "blockspare"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "wordpress.org\/themes",
+        "slug": "morenews"
+      },
+      "options": {
+        "activate": false
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "wordpress.org\/themes",
+        "slug": "centralnews"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "importFile",
+      "file": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/afthemes/blockspare.playground/refs/heads/main/blockspare.playground.xml"
+      }
+    }
+  ]
+}
